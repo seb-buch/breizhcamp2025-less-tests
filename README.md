@@ -1,7 +1,8 @@
-# Ma présentation
+# Le meilleur test, c'est celui qu'on n'a pas à écrire!
 
-Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée *LE TITRE*
-et présentée à l'endroit.
+Bienvenue sur ce repo qui contient le code des diapositives de ma présentation intitulée *Le
+meilleur test, c'est celui qu'on n'a pas à écrire!* et présentée
+à [BreizhCamp 2025](https://www.breizhcamp.org/).
 
 > [!NOTE]
 > La présentation est formatée pour être visualisée au format 16:9.
@@ -9,7 +10,7 @@ et présentée à l'endroit.
 ## Je veux voir la présentation
 
 La présentation est disponible en
-ligne [ici](https://seb-buch.github.io/).
+ligne [ici](https://seb-buch.github.io/breizhcamp2025-less-tests/).
 
 ## Je veux construire et servir la présentation en local.
 
