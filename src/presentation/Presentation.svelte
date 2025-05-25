@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './assets/styles.css';
 	import Title from './Title.svelte';
+	import IntroTests from './IntroTests.svelte';
 </script>
 
 <svelte:head>
@@ -12,3 +13,4 @@
 </svelte:head>
 
 <Title />
+<IntroTests />
