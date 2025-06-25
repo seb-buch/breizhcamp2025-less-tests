@@ -62,17 +62,21 @@ const door3: Door = { state: "closed", locked: true }`
 type Door = { isClosed: Boolean; isLocked: Boolean }
 `}
 	</PseudoCode>
-	<p>&darr;</p>
-	<PseudoCode>
-		{`
+	<div class="fragment">
+		<p>&darr;</p>
+		<PseudoCode>
+			{`
 door1 = { isClosed: False, isLocked: False }
 door2 = { isClosed: Frue, isLocked: False }
 door3 = { isClosed: False, isLocked: True }
 door4 = { isClosed: True, isLocked: True }`}
-	</PseudoCode>
-	<p>&darr;</p>
-	<p>4 états représentables</p>
-	<p>
+		</PseudoCode>
+	</div>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p>4 états représentables</p>
+	</div>
+	<p class="fragment">
 		<img src="{no}" alt="no" class="react" />
 	</p>
 </Slide>
@@ -83,22 +87,28 @@ door4 = { isClosed: True, isLocked: True }`}
 type Door = { state: "open" | "closed"; isLocked?: Boolean }
 `}
 	</PseudoCode>
-	<p>&darr;</p>
-	<PseudoCode>
-		{`
+	<div class="fragment">
+		<p>&darr;</p>
+		<PseudoCode>
+			{`
 door1 = { state: "open" }
 door2 = { state: "closed", isLocked: False }
 door3 = { state: "closed", isLocked: True }`}
-	</PseudoCode>
-	<PseudoCode>
-		{`
+		</PseudoCode>
+	</div>
+	<div class="fragment">
+		<PseudoCode>
+			{`
 door4 = { state: "open", isLocked: False }
 door5 = { state: "open", isLocked: True }
 door6 = { state: "closed" }`}
-	</PseudoCode>
-	<p>&darr;</p>
-	<p>6 états représentables</p>
-	<p>
+		</PseudoCode>
+	</div>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p>6 états représentables</p>
+	</div>
+	<p class="fragment">
 		<img src="{godNo}" alt="god no" class="react" />
 	</p>
 </Slide>
@@ -111,16 +121,20 @@ type ClosedDoor = { state: "closed", isLocked: Boolean }
 type Door = OpenDoor | ClosedDoor
 `}
 	</PseudoCode>
-	<p>&darr;</p>
-	<PseudoCode>
-		{`
+	<div class="fragment">
+		<p>&darr;</p>
+		<PseudoCode>
+			{`
 door1 = { state: "open" }
 door2 = { state: "closed", isLocked: False }
 door3 = { state: "closed", isLocked: True }`}
-	</PseudoCode>
-	<p>&darr;</p>
-	<p>3 états représentables</p>
-	<p>
+		</PseudoCode>
+	</div>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p>3 états représentables</p>
+	</div>
+	<p class="fragment">
 		<img src="{yes}" alt="yes" class="react" />
 	</p>
 </Slide>

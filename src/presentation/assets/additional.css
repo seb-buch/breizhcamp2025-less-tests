@@ -8,12 +8,4 @@
   -webkit-background-clip: text;
   filter: drop-shadow(-1px -1px black) drop-shadow(1px 1px black) drop-shadow(1px -1px black) drop-shadow(-1px 1px black) drop-shadow(-6px 4px black);
   transform: skewY(-3deg);
-
-  a {
-    color: #a46e2d;
-  }
-
-  a:hover {
-    color: #d4af37;
-  }
 }

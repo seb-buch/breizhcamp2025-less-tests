@@ -25,11 +25,7 @@
 	}: Props = $props();
 
 </script>
-<style>
-  section {
-    /*height: 100%;*/
-  }
-</style>
+
 <section data-transition="{transitionStyle}" data-transition-speed="{transitionSpeed}"
 				 data-auto-animate={autoAnimate}
 				 data-auto-animate-id="{autoAnimateID}" data-auto-animate-restart={autoAnimateRestart}

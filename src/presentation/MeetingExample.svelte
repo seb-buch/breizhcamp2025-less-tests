@@ -29,7 +29,7 @@
   }
 
   .object {
-    color: #75b620;
+    color: #a46e2d;
     font-weight: bold;
   }
 
@@ -47,17 +47,17 @@
 		</div>
 		<div>
 			<p class="object">JSON</p>
-			<p class="transfo">↓</p>
-			<p class="object"><code>MeetingFramework</code></p>
-			<p class="transfo">↓</p>
-			<p class="object"><code>Meeting</code></p>
+			<p class="transfo fragment" data-fragment-index="1">↓</p>
+			<p class="object fragment" data-fragment-index="1"><code>MeetingFramework</code></p>
+			<p class="transfo fragment" data-fragment-index="2">↓</p>
+			<p class="object fragment" data-fragment-index="2"><code>Meeting</code></p>
 		</div>
 		<div>
 			<p class="object">object "brut"</p>
-			<p class="transfo">framework</p>
-			<p class="object">objet validé structurellement</p>
-			<p class="transfo">constructeur</p>
-			<p class="object">objet métier validé</p>
+			<p class="transfo fragment" data-fragment-index="1">framework</p>
+			<p class="object fragment" data-fragment-index="1">objet validé structurellement</p>
+			<p class="transfo fragment" data-fragment-index="2">constructeur</p>
+			<p class="object fragment" data-fragment-index="2">objet métier validé</p>
 		</div>
 	</div>
 
@@ -110,7 +110,7 @@
 	<LinkToCode text="Code en Typescript" />
 	<LinkToCode text="Code en Python" />
 
-	<p>
+	<p class="fragment">
 		Pas besoin de test si c'est le framework qui teste !
 		<img src={smart} alt="smart" style="height: 3em; vertical-align: middle;padding-left: 1em" />
 	</p>

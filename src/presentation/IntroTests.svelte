@@ -5,14 +5,10 @@
 
 <style>
 
-  q {
-    display: block;
-  }
 
-  ul {
-    list-style: none;
-    line-height: 3em;
-    text-align: center;
+
+  p {
+    padding-bottom: 1em;
   }
 </style>
 
@@ -20,11 +16,9 @@
 
 	<Slide>
 		<h3>Les tests, un passage obligé</h3>
-		<ul>
-			<li>Garantir la qualité du code</li>
-			<li>Vérifier les cas limites, les erreurs, les oublis</li>
-			<li>Accompagner l’évolution du logiciel</li>
-		</ul>
+		<p>Garantir la qualité du code</p>
+		<p>Vérifier les cas limites, les erreurs, les oublis</p>
+		<p>Accompagner l’évolution du logiciel</p>
 
 		<SpeakerNotes>
 Les tests font partie de notre quotidien.
@@ -42,11 +36,10 @@ Bref, Ils constituent un outil *fondamental*, on est d’accord.
 
 	<Slide>
 		<h3>Mais soyons honnêtes&nbsp;&hellip;</h3>
-		<ul>
-			<li>Écrire des tests, ce n’est pas toujours fun 😅</li>
-			<li>On se sent souvent obligé de "couvrir" des cas qu’on a déjà gérés dans le code</li>
-			<li>Parfois, on écrit des tests... juste pour éviter un bug improbable</li>
-		</ul>
+		<p>Écrire des tests, ce n’est pas toujours fun 😅</p>
+		<p class="fragment">On est souvent obligé de couvrir des cas liés à des données erronées </p>
+		<p class="fragment">Parfois, on écrit des tests... juste pour éviter un bug improbable</p>
+
 		<SpeakerNotes>
 Mais soyons honnêtes deux minutes :
 
@@ -59,13 +52,15 @@ Mais soyons honnêtes deux minutes :
 
 	<Slide>
 		<h3>Quelques exemples</h3>
-		<ul>
-			<li>Euh... Il se passe quoi si <code>[insérer nom variable]</code> est
-				<code>null</code>&nbsp;?
-			</li>
-			<li>Et si la <code>quantity</code> est négative&nbsp;?</li>
-			<li>Et si <code>user.age</code> n’est pas un entier&nbsp;?</li>
-		</ul>
+		<p class="fragment" >Et si la <code>quantity</code> est négative&nbsp;?</p>
+		<p class="fragment">Et si <code>user.age</code> n’est pas un entier&nbsp;?</p>
+		<p class="fragment" >
+			Normalement, <code>[nom attribut]</code> est défini si <code>[nom autre attribut]</code> est défini.<br/>
+			Euh&hellip; T'es sûr&nbsp;?<br/>
+			Normalement&hellip;<br/>
+			Ben, du coup il faut vérifier.<br/>
+			Euh&hellip; Oui !
+
 		<SpeakerNotes>
 Je vous propose quelques exemples pour illustrer ça.
 
@@ -84,11 +79,9 @@ Et si je vous disais qu'on peut éviter ce genre de bug sans avoir besoin de fai
 
 	<Slide>
 		<h3>Notre objectif aujourd’hui</h3>
-		<ul>
-			<li>Explorer des moyens d’éviter d’écrire ces tests</li>
-			<li>En utilisant le typage et la structure des données</li>
-			<li>Pour un code plus robuste, et plus simple à maintenir</li>
-		</ul>
+		<p class="fragment">Explorer des moyens pour éviter d'avoir à se poser ce genre de questions</p>
+		<p class="fragment">En utilisant le typage et la structure des données</p>
+		<p class="fragment">Pour un code plus explicite, et plus simple à maintenir</p>
 
 		<SpeakerNotes>
 C'est ce que je vous propose de voir ensemble pendant ces 3/4 d'heure qu'on va passer ensemble.
@@ -102,14 +95,12 @@ Afin qu'un maximum de personnes trouvent leur compte, on prendra comme exemples 
 
 	<Slide>
 		<h3>Mise en garde</h3>
-		<ul>
-			<li>On ne va pas parler ici de types de tests&nbsp;: unitaires, intégration, end-to-end,
+			<p class="fragment">On ne va pas parler de types de tests&nbsp;: unitaires, intégration, end-to-end,
 				utilisateurs…
-			</li>
-			<li>On parle des tests au sens large&nbsp;: un moyen de détecter des anomalies
-			</li>
-			<li>On n'en verra pas&nbsp;!
-		</ul>
+			</p>
+			<p class="fragment">On parle des tests au sens large&nbsp;: un moyen de détecter des anomalies
+			</p>
+			<p class="fragment">On n'en verra pas&nbsp;!</p>
 
 		<SpeakerNotes>
 Avant d'aller plus loin, on petit avertissement pour les puristes de la terminologie capablent de discuter longtemps (trop longtemps) pour savoir si tel ou tel test est un test unitaire ou bien d'intégration.

@@ -4,6 +4,8 @@
 	import Code from '$lib/Code.svelte';
 	import TrafficLight from './assets/images/traffic_light.png';
 	import LanguageLogo from './LanguageLogo.svelte';
+	import nope from './assets/images/no.gif';
+	import yes from './assets/images/yes.gif';
 </script>
 
 <style>
@@ -55,6 +57,10 @@
     padding-top: 1em;
   }
 
+  .react {
+    height: 6em;
+  }
+
 </style>
 
 
@@ -74,71 +80,6 @@ TrafficLightColor = String`}
 		{`
 TrafficLightColor = "red" | "orange" | "green"`}
 	</PseudoCode>
-</Slide>
-
-<Slide>
-	<PseudoCode>
-		{`
-TrafficLight = (Boolean, Boolean, Boolean)`}
-	</PseudoCode>
-	<p>&darr;</p>
-	<p class="logic-text">
-		Boolean = &lbrace;<i>True</i>, <i>False</i>&rbrace;
-		<br />
-		TrafficLight = &lbrace;(
-		<span class="type1">x</span>,
-		<span class="type2">y</span>,
-		<span class="type3">z</span> ):
-		<span class="type1">x</span> &in; Boolean,
-		<span class="type2">y</span> &in; Boolean,
-		<span class="type3">z</span> &in; Boolean;
-		&rbrace;
-	</p>
-	<p>&darr;</p>
-	<p>
-		<span class="type1">2</span><span class="logic-operand">&times;</span>
-		<span class="type2">2</span><span class="logic-operand">&times;</span>
-		<span class="type3">2</span>
-		&equals; 8 valeurs/états possibles
-	</p>
-</Slide>
-
-<Slide>
-	<PseudoCode>
-		{`
-			TrafficLightColor = String`}
-	</PseudoCode>
-	<p>&darr;</p>
-	<p class="logic-text">
-		TrafficLightColor = &lbrace;
-		<span class="type1">x</span> :
-		<span class="type1">x</span> &in;
-		&lbrace; "red", "orange", "green", "", "Aa@1", &hellip; &rbrace;
-		&rbrace;
-	</p>
-	<p>&darr;</p>
-	<p>
-		"infinité" de valeurs/états possibles
-	</p>
-</Slide>
-
-<Slide>
-	<PseudoCode>
-		{`
-			TrafficLightColor = "red" | "orange" | "green"`}
-	</PseudoCode>
-	<p>&darr;</p>
-	<p class="logic-text">
-		TrafficLightColor = &lbrace;
-		<span class="type1">x</span> :
-		<span class="type1">x</span> &in;
-		&lbrace; "red", "orange", "green" &rbrace;
-		&rbrace;
-	</p>
-	<p>&darr;</p>
-	<p>
-		3 valeurs/états possibles
-	</p>
 </Slide>
 
 <Slide>
@@ -199,5 +140,89 @@ type TrafficLightColor = Literal["red", "orange", "green"]`}
 		Mot clé <code>type</code> nécessite Python 3.12 (cf. <a
 		href="https://peps.python.org/pep-0695/"
 		target="_blank">PEP 695</a>)
+	</p>
+</Slide>
+
+
+<Slide>
+	<PseudoCode>
+		{`
+TrafficLight = (Boolean, Boolean, Boolean)`}
+	</PseudoCode>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p class="logic-text">
+			Boolean = &lbrace;<i>True</i>, <i>False</i>&rbrace;
+			<br />
+			TrafficLight = &lbrace;(
+			<span class="type1">x</span>,
+			<span class="type2">y</span>,
+			<span class="type3">z</span> ):
+			<span class="type1">x</span> &in; Boolean,
+			<span class="type2">y</span> &in; Boolean,
+			<span class="type3">z</span> &in; Boolean;
+			&rbrace;
+		</p>
+	</div>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p>
+			<span class="type1">2</span><span class="logic-operand">&times;</span>
+			<span class="type2">2</span><span class="logic-operand">&times;</span>
+			<span class="type3">2</span>
+			&equals; 8 valeurs/états possibles
+		</p>
+	</div>
+	<p class="fragment">
+		<img src={nope} alt="not good" class="react" />
+	</p>
+</Slide>
+
+<Slide>
+	<PseudoCode>
+		{`
+			TrafficLightColor = String`}
+	</PseudoCode>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p class="logic-text">
+			TrafficLightColor = &lbrace;
+			<span class="type1">x</span> :
+			<span class="type1">x</span> &in;
+			&lbrace; "red", "orange", "green", "", "Aa@1", &hellip; &rbrace;
+			&rbrace;
+		</p>
+	</div>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p>
+			"infinité" de valeurs/états possibles
+		</p>
+	</div>
+</Slide>
+
+<Slide>
+	<PseudoCode>
+		{`
+			TrafficLightColor = "red" | "orange" | "green"`}
+	</PseudoCode>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p class="logic-text">
+			TrafficLightColor = &lbrace;
+			<span class="type1">x</span> :
+			<span class="type1">x</span> &in;
+			&lbrace; "red", "orange", "green" &rbrace;
+			&rbrace;
+		</p>
+	</div>
+	<div class="fragment">
+		<p>&darr;</p>
+		<p>
+			3 valeurs/états possibles
+		</p>
+	</div>
+	<p class="fragment">
+		<img src={yes} alt="good" class="react" />
 	</p>
 </Slide>
