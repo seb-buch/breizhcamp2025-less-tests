@@ -106,9 +106,12 @@
 		<li><b>validation structurelle</b></li>
 	</ol>
 
-	<LinkToCode text="Code en Java" />
-	<LinkToCode text="Code en Typescript" />
-	<LinkToCode text="Code en Python" />
+	<LinkToCode text="Code en Java"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/java/src/main/java/sbuch/presentation/examples/meeting/framework/MeetingFramework.java" />
+	<LinkToCode text="Code en Typescript"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/typescript/src/meetingExample/framework.ts" />
+	<LinkToCode text="Code en Python"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/python/src/examples/meeting/framework.py" />
 
 	<p class="fragment">
 		Pas besoin de test si c'est le framework qui teste !
@@ -132,9 +135,12 @@
 
 	<VerticalSpacer height="1em" />
 
-	<LinkToCode text="Code en Java" />
-	<LinkToCode text="Code en Typescript" />
-	<LinkToCode text="Code en Python" />
+	<LinkToCode text="Code en Java"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/java/src/main/java/sbuch/presentation/examples/meeting/core/Meeting.java" />
+	<LinkToCode text="Code en Typescript"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/typescript/src/meetingExample/core.ts" />
+	<LinkToCode text="Code en Python"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/python/src/examples/meeting/core.py" />
 </Slide>
 
 <Slide>
@@ -142,6 +148,7 @@
 	<VerticalSpacer height="2em" />
 
 	<LinkToCode text="Code en Java" />
-	<LinkToCode text="Code en Typescript" />
+	<LinkToCode text="Code en Typescript"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/typescript/src/meetingExample/meetingExample.ts" />
 	<LinkToCode text="Code en Python" />
 </Slide>

@@ -6,6 +6,7 @@
 	import LanguageLogo from './LanguageLogo.svelte';
 	import nope from './assets/images/no.gif';
 	import yes from './assets/images/yes.gif';
+	import screwed from './assets/images/screwed.gif';
 </script>
 
 <style>
@@ -199,6 +200,9 @@ TrafficLight = (Boolean, Boolean, Boolean)`}
 			"infinité" de valeurs/états possibles
 		</p>
 	</div>
+	<p class="fragment">
+		<img src={screwed} alt="we are screwed" class="react" />
+	</p>
 </Slide>
 
 <Slide>

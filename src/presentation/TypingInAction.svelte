@@ -63,7 +63,8 @@ void makeQuackerQuack(Quacker quacker) {...}
 void makeStuffQuack(Object maybeQuacker) {...}
 			`}
 		</Code>
-		<LinkToCode />
+		<LinkToCode
+			url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/java/src/main/java/sbuch/presentation/examples/DuckExample.java" />
 	</Slide>
 
 	<Slide>
@@ -103,7 +104,8 @@ function makeDuckQuack(duck: Duck) {...}
 function makeStuffQuack(stuff: unknown) {...}
 		`}
 		</Code>
-		<LinkToCode />
+		<LinkToCode
+			url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/typescript/src/duckExample.ts" />
 	</Slide>
 
 	<Slide>
