@@ -9,11 +9,11 @@
 		autoAnimateID?: string | null;
 		autoAnimateRestart?: boolean | null;
 		backgroundImage?: string | null;
-		backgroundSize?: 'cover' | null;
+		backgroundSize?: 'cover' | 'contain' | 'auto' | null;
 		children: Snippet;
 	}
 
-	let {
+	const {
 		transitionStyle = null,
 		transitionSpeed = null,
 		children,
@@ -26,11 +26,12 @@
 
 </script>
 <style>
-    section {
-        height: 100%;
-    }
+  section {
+    /*height: 100%;*/
+  }
 </style>
-<section data-transition="{transitionStyle}" data-transition-speed="{transitionSpeed}" data-auto-animate={autoAnimate}
+<section data-transition="{transitionStyle}" data-transition-speed="{transitionSpeed}"
+				 data-auto-animate={autoAnimate}
 				 data-auto-animate-id="{autoAnimateID}" data-auto-animate-restart={autoAnimateRestart}
 				 data-background-image={backgroundImage} data-background-size={backgroundSize}>
 	{@render children()}

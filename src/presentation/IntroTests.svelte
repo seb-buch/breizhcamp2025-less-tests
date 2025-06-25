@@ -8,17 +8,25 @@
   q {
     display: block;
   }
+
+  ul {
+    list-style: none;
+    line-height: 3em;
+    text-align: center;
+  }
 </style>
 
-<Slide>
-	<h3>Les tests, un passage obligé</h3>
-	<ul>
-		<li>Garantir la qualité du code</li>
-		<li>Vérifier les cas limites, les erreurs, les oublis</li>
-		<li>Accompagner l’évolution du logiciel</li>
-	</ul>
+<section>
 
-	<SpeakerNotes>
+	<Slide>
+		<h3>Les tests, un passage obligé</h3>
+		<ul>
+			<li>Garantir la qualité du code</li>
+			<li>Vérifier les cas limites, les erreurs, les oublis</li>
+			<li>Accompagner l’évolution du logiciel</li>
+		</ul>
+
+		<SpeakerNotes>
 Les tests font partie de notre quotidien.
 
 Ils nous permettent:
@@ -29,17 +37,17 @@ Ils nous permettent:
 
 Bref, Ils constituent un outil *fondamental*, on est d’accord.
 	</SpeakerNotes>
-</Slide>
+	</Slide>
 
 
-<Slide>
-	<h3>Mais soyons honnêtes&nbsp;&hellip;</h3>
-	<ul>
-		<li>Écrire des tests, ce n’est pas toujours fun 😅</li>
-		<li>On se sent souvent obligé de "couvrir" des cas qu’on a déjà gérés dans le code</li>
-		<li>Parfois, on écrit des tests... juste pour éviter un bug improbable</li>
-	</ul>
-	<SpeakerNotes>
+	<Slide>
+		<h3>Mais soyons honnêtes&nbsp;&hellip;</h3>
+		<ul>
+			<li>Écrire des tests, ce n’est pas toujours fun 😅</li>
+			<li>On se sent souvent obligé de "couvrir" des cas qu’on a déjà gérés dans le code</li>
+			<li>Parfois, on écrit des tests... juste pour éviter un bug improbable</li>
+		</ul>
+		<SpeakerNotes>
 Mais soyons honnêtes deux minutes :
 
  - Premièrement, écrire des tests, ce n’est pas toujours passionnant.
@@ -47,15 +55,18 @@ Mais soyons honnêtes deux minutes :
  - Et parfois, on se dit : 'Bon, allez, je vais tester quand même ce cas bizarre…'
 
 	</SpeakerNotes>
-</Slide>
+	</Slide>
 
-<Slide>
-	<h3>Quelques exemples</h3>
-	<q>Euh... Il se passe quoi si <code>[insérer nom variable]</code> est <code>null</code>&nbsp;?</q>
-	<q>Et si la <code>quantity</code> est négative&nbsp;?</q>
-	<q>Et si <code>user.age</code> n’est pas un entier&nbsp;?</q>
-
-	<SpeakerNotes>
+	<Slide>
+		<h3>Quelques exemples</h3>
+		<ul>
+			<li>Euh... Il se passe quoi si <code>[insérer nom variable]</code> est
+				<code>null</code>&nbsp;?
+			</li>
+			<li>Et si la <code>quantity</code> est négative&nbsp;?</li>
+			<li>Et si <code>user.age</code> n’est pas un entier&nbsp;?</li>
+		</ul>
+		<SpeakerNotes>
 Je vous propose quelques exemples pour illustrer ça.
 
 On commence par un test qui va parler à ceux qui font du Java.
@@ -69,17 +80,17 @@ Bref, on passe beaucoup de temps à écrire des tests juste pour éviter ce genr
 
 Et si je vous disais qu'on peut éviter ce genre de bug sans avoir besoin de faire d'écrire plein de tests?
 	</SpeakerNotes>
-</Slide>
+	</Slide>
 
-<Slide>
-	<h3>Notre objectif aujourd’hui</h3>
-	<ul>
-		<li>Explorer des moyens d’éviter d’écrire ces tests</li>
-		<li>En utilisant le typage et la structure des données</li>
-		<li>Pour un code plus robuste, et plus simple à maintenir</li>
-	</ul>
+	<Slide>
+		<h3>Notre objectif aujourd’hui</h3>
+		<ul>
+			<li>Explorer des moyens d’éviter d’écrire ces tests</li>
+			<li>En utilisant le typage et la structure des données</li>
+			<li>Pour un code plus robuste, et plus simple à maintenir</li>
+		</ul>
 
-	<SpeakerNotes>
+		<SpeakerNotes>
 C'est ce que je vous propose de voir ensemble pendant ces 3/4 d'heure qu'on va passer ensemble.
 
 Pour cela, on va commencer par s'intéresser un peu aux différentes approches de typage des données prises par les languages de programmation.
@@ -87,23 +98,25 @@ Pour cela, on va commencer par s'intéresser un peu aux différentes approches d
 On verra ensuite concrètement comment utiliser un typage de données adapté pour obtenir un code plus robuste et plus simple à maintenir.
 Afin qu'un maximum de personnes trouvent leur compte, on prendra comme exemples trois languages très utilisés: Java, Typescript, et Python.
 	</SpeakerNotes>
-</Slide>
+	</Slide>
 
-<Slide>
-	<h3>Mise en garde</h3>
-	<ul>
-		<li>On ne va pas parler ici de types de tests&nbsp;: unitaires, intégration, end-to-end,
-			utilisateurs…
-		</li>
-		<li>On parle des tests au sens large&nbsp;: un moyen de détecter des anomalies
-		</li>
-	</ul>
+	<Slide>
+		<h3>Mise en garde</h3>
+		<ul>
+			<li>On ne va pas parler ici de types de tests&nbsp;: unitaires, intégration, end-to-end,
+				utilisateurs…
+			</li>
+			<li>On parle des tests au sens large&nbsp;: un moyen de détecter des anomalies
+			</li>
+			<li>On n'en verra pas&nbsp;!
+		</ul>
 
-	<SpeakerNotes>
+		<SpeakerNotes>
 Avant d'aller plus loin, on petit avertissement pour les puristes de la terminologie capablent de discuter longtemps (trop longtemps) pour savoir si tel ou tel test est un test unitaire ou bien d'intégration.
 
 Ici, je vais parler de tests au sens large.
 
 Pour ce qui nous intéresse aujourd'hui, un test est un moyen de détecter des anomalies (idéalement le plus tôt possible)
 	</SpeakerNotes>
-</Slide>
+	</Slide>
+</section>

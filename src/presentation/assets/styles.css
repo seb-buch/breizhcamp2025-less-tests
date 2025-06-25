@@ -4,36 +4,55 @@
  * By Hakim El Hattab, http://hakim.se
  */
 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'Indiana Jones';
+  src: url('SF Fedora.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Indiana Jones Titles';
+  src: url('SF Fedora Titles.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 section.has-dark-background, section.has-dark-background h1, section.has-dark-background h2, section.has-dark-background h3, section.has-dark-background h4, section.has-dark-background h5, section.has-dark-background h6 {
-  color: #fff;
+  color: #F9FAFB;
 }
 
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 :root {
-  --r-background-color: #fff;
-  --r-main-font: Source Sans Pro, Helvetica, sans-serif;
+  --r-background-color: #f9fbfb;
+  --r-main-font: Lato, sans-serif;
   --r-main-font-size: 42px;
-  --r-main-color: #222;
+  --r-main-color: #334155;
   --r-block-margin: 20px;
   --r-heading-margin: 0 0 20px 0;
-  --r-heading-font: Source Sans Pro, Helvetica, sans-serif;
-  --r-heading-color: #222;
-  --r-heading-line-height: 1.2;
+  --r-heading-font: "Indiana Jones Titles", sans-serif;
+  --r-heading-color: #9d5c00;
+  --r-heading-line-height: 2;
   --r-heading-letter-spacing: normal;
-  --r-heading-text-transform: uppercase;
+  --r-heading-text-transform: none;
   --r-heading-text-shadow: none;
-  --r-heading-font-weight: 600;
-  --r-heading1-text-shadow: none;
+  --r-heading-font-weight: 800;
+  --r-heading1-text-shadow: 0px 0px 2px #9d5c00;
   --r-heading1-size: 2.5em;
   --r-heading2-size: 1.6em;
-  --r-heading3-size: 1.3em;
+  --r-heading3-size: 1.6em;
   --r-heading4-size: 1em;
-  --r-code-font: monospace;
-  --r-link-color: #2a76dd;
+  --r-code-font: "Jetbrains Mono", monospace;
+  --r-link-color: #29669b;
   --r-link-color-dark: rgb(30.7720647773, 99.5566801619, 192.7779352227);
-  --r-link-color-hover: rgb(73.95, 138.55, 226.1);
+  --r-link-color-hover: #2d85c6;
   --r-selection-background-color: rgb(95.25, 152.25, 229.5);
   --r-selection-color: #fff;
   --r-overlay-element-bg-color: 0, 0, 0;
@@ -41,12 +60,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 }
 
 .reveal-viewport {
-  background: #fff;
   background-color: var(--r-background-color);
+  background-image: url("./images/ij-background.png");
+  background-size: cover;
+  backdrop-filter: brightness(1.6) contrast(0.5);
 }
 
 .reveal {
-  font-family: var(--r-main-font);
+  font-family: var(--r-main-font), sans-serif;
   font-size: var(--r-main-font-size);
   font-weight: normal;
   color: var(--r-main-color);
@@ -81,20 +102,34 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 .reveal h6 {
   margin: var(--r-heading-margin);
   color: var(--r-heading-color);
-  font-family: var(--r-heading-font);
+  font-family: var(--r-heading-font), sans-serif;
   font-weight: var(--r-heading-font-weight);
   line-height: var(--r-heading-line-height);
   letter-spacing: var(--r-heading-letter-spacing);
   text-transform: var(--r-heading-text-transform);
   text-shadow: var(--r-heading-text-shadow);
   word-wrap: break-word;
+  text-align: center;
+}
+
+.reveal h1, .reveal h2 {
+  font-family: 'Indiana Jones', sans-serif;
+  font-size: 2.5em;
+  text-shadow: none !important;
+  background: linear-gradient(180deg, #8b4513, #d4af37);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(-1px -1px black) drop-shadow(1px 1px black) drop-shadow(1px -1px black) drop-shadow(-1px 1px black) drop-shadow(-6px 4px black);
 }
 
 .reveal h1 {
-  font-size: var(--r-heading1-size);
+  transform: skewY(-5deg);
 }
 
+
 .reveal h2 {
+  transform: skewY(-3deg);
   font-size: var(--r-heading2-size);
 }
 
@@ -193,7 +228,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   padding: 5px;
   font-style: italic;
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
 .reveal blockquote p:first-child,
@@ -212,14 +247,14 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   margin: var(--r-block-margin) auto;
   text-align: left;
   font-size: 0.55em;
-  font-family: var(--r-code-font);
+  font-family: var(--r-code-font), monospace;
   line-height: 1.2em;
   word-wrap: break-word;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .reveal code {
-  font-family: var(--r-code-font);
+  font-family: var(--r-code-font), monospace;
   text-transform: none;
   tab-size: 2;
 }

@@ -10,7 +10,7 @@
 	import { checkSlideDimensions } from '$lib/core';
 
 	export let reveal: Options = {
-		slideNumber: false,
+		slideNumber: true,
 		showSlideNumber: 'all',
 		controls: false,
 		transition: 'none',
@@ -19,7 +19,7 @@
 		width: 1920,
 		height: 1080,
 		plugins: [RevealHighlight, RevealNotes, RevealMath.KaTeX],
-		center: false
+		center: true
 	};
 
 	onMount(async () => {
@@ -35,6 +35,7 @@
 </script>
 
 <svelte:head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 	<script src="https://kit.fontawesome.com/b8d279694e.js" crossorigin="anonymous"></script>
 </svelte:head>
 

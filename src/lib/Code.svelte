@@ -8,7 +8,8 @@
 		language?: string;
 		noescape?: boolean | null;
 		id?: string | null;
-		width?: string | null
+		width?: string | null;
+		fontSize?: string | null;
 		children: Snippet;
 	}
 
@@ -20,6 +21,7 @@
 		lineNumbers = true,
 		id = null,
 		width = "fit-content",
+		fontSize = "1em",
 		children
 	}: Props = $props();
 
@@ -32,28 +34,12 @@
         pre {
             min-width: 50%;
             max-width: 90%;
+					border-radius: 0.2em;
 
             code {
-                padding: 0.7em;
-                max-height: 1000px;
-            }
-
-            &:before {
-                content: "";
-                position: absolute;
-                right: 1.5em;
-                top: 0.5em;
-                color: var(--r-main-color);
-                opacity: 0.5;
-                font-size: 0.5em;
-            }
-
-            &.language-java:before {
-                content: "Java";
-            }
-
-            &.language-javascript:before {
-                content: "Javascript";
+                padding: 10px;
+                max-height: 900px;
+              border-radius: 0.2em;
             }
         }
 
@@ -62,7 +48,7 @@
 
 {#if children}
 	<div class="code-block">
-		<pre class="language-{language}" data-id="{id}" style="width:{width}">
+		<pre class="language-{language}" data-id="{id}" style="width:{width};font-size:{fontSize};">
 		<code data-noescape={noescape} data-trim={trim} data-line-numbers={lineNumbers}
 					data-ln-start-from={lineNumbersFrom}>
 			{@render children()}

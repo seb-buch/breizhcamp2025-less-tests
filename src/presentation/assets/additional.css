@@ -1,0 +1,19 @@
+.link-to-code {
+  padding-top: 1em;
+  font-size: 1.1em;
+  font-family: "Indiana Jones", sans-serif;
+  background: linear-gradient(180deg, #8b4513, #d4af37);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  filter: drop-shadow(-1px -1px black) drop-shadow(1px 1px black) drop-shadow(1px -1px black) drop-shadow(-1px 1px black) drop-shadow(-6px 4px black);
+  transform: skewY(-3deg);
+
+  a {
+    color: #a46e2d;
+  }
+
+  a:hover {
+    color: #d4af37;
+  }
+}
