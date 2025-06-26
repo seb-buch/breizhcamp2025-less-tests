@@ -147,8 +147,10 @@
 	<h3>Etape 3 : On utilise des objets validés!</h3>
 	<VerticalSpacer height="2em" />
 
-	<LinkToCode text="Code en Java" />
+	<LinkToCode text="Code en Java"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/java/src/main/java/sbuch/presentation/examples/meeting/MeetingExample.java" />
 	<LinkToCode text="Code en Typescript"
 							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/typescript/src/meetingExample/meetingExample.ts" />
-	<LinkToCode text="Code en Python" />
+	<LinkToCode text="Code en Python"
+							url="https://github.com/seb-buch/more-types-less-tests-code/blob/main/python/src/examples/meeting/meeting_example.py" />
 </Slide>
