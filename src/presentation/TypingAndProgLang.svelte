@@ -1,6 +1,5 @@
 <script>
 	import Slide from '$lib/Slide.svelte';
-	import SpeakerNotes from '$lib/SpeakerNotes.svelte';
 </script>
 
 <style>
@@ -48,10 +47,6 @@
 			systèmes de typage
 		</h2>
 
-		<SpeakerNotes>
-			[A REVOIR]
-Pour comprendre comment le typage peut nous aider, il faut déjà clarifier ce qu’on met derrière le mot 'typage'…
-		</SpeakerNotes>
 	</Slide>
 
 	<Slide>
@@ -60,16 +55,10 @@ Pour comprendre comment le typage peut nous aider, il faut déjà clarifier ce q
 			<b>définir et gérer les types de données</b>
 		</p>
 		<p>
-			Il existe différentes approches que peuvent implémenter les languages de programmation
+			Il existe différentes approches que peuvent implémenter les langages de programmation
 		</p>
 
-		<SpeakerNotes>
-			[A REVOIR]
-Le typage, c’est un outil super puissant.
-Il nous permet de détecter des erreurs dès l’écriture du code, avant même de lancer le programme.
-Il nous guide dans la conception des systèmes, et il réduit la surface des bugs.
-Mais... tous les langages ne jouent pas dans la même cour.
-		</SpeakerNotes>
+
 	</Slide>
 
 	<Slide>
@@ -78,26 +67,16 @@ Mais... tous les langages ne jouent pas dans la même cour.
 		<p><b>Statique</b>&nbsp;: les erreurs de type sont détectées à la compilation</p>
 		<p><b>Dynamique</b>&nbsp;: les erreurs de type sont détectées à l’exécution</p>
 
-		<SpeakerNotes>
-Premier axe : statique ou dynamique.
-En statique, comme en Java ou Rust, le compilateur va vérifier les types avant même d’exécuter le code.
-En dynamique, comme en Python ou JavaScript, on ne le saura… qu’au moment de l’exécution.
-Chacun a ses avantages et ses inconvénients.
-		</SpeakerNotes>
+
 	</Slide>
 
 	<Slide>
-		<h3>Typage nominal vs structural</h3>
+		<h3>Typage nominal vs structurel</h3>
 
-		<p><b>Nominal</b>&nbsp;: les types sont définis par leur nom (ou leur "étiquette")</p>
-		<p><b>Structural</b>&nbsp;: les types sont définis par leur structure</p>
+		<p><b>Nominal</b>&nbsp;: les types sont définis par leur nom</p>
+		<p><b>Structurel</b>&nbsp;: les types sont définis par leur structure</p>
 
-		<SpeakerNotes>
-Premier axe : statique ou dynamique.
-En statique, comme en Java ou Rust, le compilateur va vérifier les types avant même d’exécuter le code.
-En dynamique, comme en Python ou JavaScript, on ne le saura… qu’au moment de l’exécution.
-Chacun a ses avantages et ses inconvénients.
-		</SpeakerNotes>
+
 	</Slide>
 
 	<Slide>
@@ -108,7 +87,7 @@ Chacun a ses avantages et ses inconvénients.
 			<tr>
 				<td>Typage</td>
 				<th>Nominal</th>
-				<th>Structural</th>
+				<th>Structurel</th>
 			</tr>
 			</thead>
 			<tbody>
@@ -131,11 +110,6 @@ Chacun a ses avantages et ses inconvénients.
 			</caption>
 		</table>
 
-		<SpeakerNotes>
-Pour résumer tout ça, voilà un tableau qui croise ces deux axes :
-Statique ou dynamique d’un côté, nominal ou structural de l’autre.
-Quelques exemples de langages célèbres pour chaque case :
-		</SpeakerNotes>
 	</Slide>
 
 
